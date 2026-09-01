@@ -4,10 +4,11 @@
 
 ## 収録
 
-| パス | 対象 | 行数 |
-|---|---|---|
-| [`nodejs/CODING_RULES.md`](nodejs/CODING_RULES.md) | ECMAScript / TypeScript / Node.js | 788 |
-| [`nodejs/PLUGIN_SYSTEM_RULES.md`](nodejs/PLUGIN_SYSTEM_RULES.md) | 上記の任意追加。プラグイン方式の拡張点を持つライブラリ向け | 135 |
+| パス | 対象 |
+|---|---|
+| [`nodejs/CODING_RULES.md`](nodejs/CODING_RULES.md) | ECMAScript / TypeScript / Node.js |
+| [`nodejs/PLUGIN_SYSTEM_RULES.md`](nodejs/PLUGIN_SYSTEM_RULES.md) | 上記の任意追加。プラグイン方式の拡張点を持つライブラリ向け |
+| [`MAINTAINING.md`](MAINTAINING.md) | **規約を編集するとき**に読む。コードを書くときには読まない |
 
 `PLUGIN_SYSTEM_RULES.md` は**特定のアーキテクチャを採る場合にのみ**適用する。冒頭の適用条件を満たさないなら読み込まない。
 
@@ -27,9 +28,8 @@
 
 規約は常時ロードされる文書であり、**書き足すほど価値が下がる**性質を持つ。
 
-1. `nodejs/CODING_RULES.md` §8.4 の**追記ゲート**（再現性・普遍性・恒久性・プローズ充足性・頻度）を通す。5つ全部を満たさないものは書かない
-2. §8.5 の**意図的に持たないもの**に該当しないか確かめる。設定ファイルの原本・ピン止めしたバージョン番号・変更履歴・検証ログは置かない
-3. 実行環境に依存する事実は、**実際に動かして確かめてから書く**（`AGENTS.md` の「手元での検証手段」）
+1. **[`MAINTAINING.md`](MAINTAINING.md) を先に読む。** 記述の3分類・追記ゲート・削るときの基準・意図的に持たないものを、そこが定めている
+2. 実行環境に依存する事実は、**実際に動かして確かめてから書く**（`AGENTS.md` の「手元での検証手段」）
 
 新しい API の可用性は、規約本体ではなく**付録 A の下限マーカー**に足す。「Node 26 以降」のような下限は腐らないが、「Node 26 を使う」はピン止めなので書かない。
 
